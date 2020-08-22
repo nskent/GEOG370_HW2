@@ -8,26 +8,56 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color">By:Nate Kent</h2>
+    <p>I created the following projections using the Qgis software by first downloading a natural earth vector image and downloading the "Indacatrix Mapper" plugin to add the distortion markers. For each seperate map, I used the same vector image while simply changing the map projection in the Qgis properties. After creating each map I then created a print layout for each one complete with a text box indicating the Projection name and EPSG indentification number. After converting each map projection to their respective PNGs, I inserted the images into the pre-prepared HTML code on Microsoft Visual Studio Code. After the code was complete, I created a sharable link for my own website with github desktop and completed my project. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Using the WGS84 data, this map projects the earth onto a rectangle that distorts slightly in size and shape when moving towards the poles from the equator.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>This projection compromises both size and shape very slightly to create a picture that slightly distorts both factors whenever you move away from the central node, but these difference are very slight.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Psuedo Mercator</h2>
-    <h3>Some observations</h3>
-    <a href="./maps/">
-    <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
+    <h3>The most commonly seen on web-based map engines, this projection preserves shape perfectly, but consequentially increases the size of land masses near the poles by a factor of about 14. </h3>
+    <a href=".//maps/3857.png">
+    <img src=".//maps/3857.png" alt="Puesdo Mercator" width='500px'>
+    </a>    
+    <h2>Winkel Spherical Projection</h2>
+    <h3>This projection was created to minimize distortion between the 3 major factors of area, distance, and shape distortion to give a more clear conception of the world without one factor being completely compromised.</h3>
+    <a href=".//maps/53018.png">
+    <img src="./maps/53018.png" alt="Winkel Spherical" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>World Cylindrical Equal Area</h2>
+    <h3>This projection was created by projecting the globe onto a cylinder, therefore solving the problem of equal area, but losing quite a bit of accuracy when it comes to shape.</h3>
+    <a href=".//maps/54034.png">
+    <img src="./maps/54034.png" alt="World Cylindrical Equal Area" width='500px'>
+    </a>
+    <h2>World Equidistant Conic</h2>
+    <h3>As the name implies, this is a conic map that preserves distance, slightly distorting size and shape as one moves down the prime meridian.</h3>
+    <a href=".//maps/54027.png">
+    <img src="./maps/54027.png" alt="World Equidistant Conic" width='500px'>
+    </a>
+    <h2>Azimuthal Equidistant</h2>
+    <h3>The most notable feature of this projection is that all points are an equal distant from the center point of the map (the north pole in this case), and can be useful when distance is an important factor.</h3>
+    <a href="./maps/102016.png">
+    <img src="./maps/102016.png" alt="Azimuthal Equidistant" width='500px'>
+    </a>
+    <h2>Sinusoidal</h2>
+    <h3>This projection accurately preserves both distance and area, distorting as one moves away from the center of the map, especially the poles. It is mainly used to show the maps of continents like Africa because it is relatively central in the map, meaning that distortion will be at a minimum.</h3>
+    <a href="./maps/54008.png">
+    <img src="./maps/54008.png" alt="Sinusoidal" width='500px'>
+    </a>
+    <h2>Stereographic</h2>
+    <h3>An ancient projection originally used for star charts, the Stereographic projection is technically infinite in area so is used to only look at one hemisphere at a time. It's relative accuracy within one hemisphere attracted cosmologists and mathamaticians to examine the cosmos through this old projection.</h3>
+    <a href="./maps/54026.png">
+    <img src="./maps/54026.png" alt="Stereographic" width='500px'>
+    </a>
+     <h2 ></h2>
+    <h3></h3>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
